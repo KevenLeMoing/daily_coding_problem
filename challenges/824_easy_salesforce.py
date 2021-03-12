@@ -7,9 +7,9 @@ should match that input node.
 
 
 class BinaryTree:
-    def __init__(self):
-        self.right_node = 0
-        self.left_node = 0
+    def __init__(self, right: int = 0, left: int = 0):
+        self.right_node = right
+        self.left_node = left
 
     def set_right_node(self, value: int):
         self.right_node = value
@@ -32,3 +32,11 @@ def merge_binary_trees(tree1: BinaryTree, tree2: BinaryTree) -> BinaryTree:
     merge_result.set_right_node(value=tree1.get_right_node() + tree2.get_right_node())
     merge_result.set_left_node(value=tree1.get_left_node() + tree2.get_left_node())
     return merge_result
+
+
+first_tree = BinaryTree(3, 6)
+second_tree = BinaryTree(4, 9)
+
+fusion = merge_binary_trees(first_tree, second_tree)
+print('right node is:{}'.format(fusion.get_right_node()))
+print('left node is:{}'.format(fusion.get_left_node()))
