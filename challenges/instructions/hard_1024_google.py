@@ -16,7 +16,7 @@ def my_func(my_list: list) -> int:
             continue
 
 
-def my_func_2(my_list: list) -> int:
+def compute_o_n(my_list: list) -> int:
     for x in my_list:
         if my_list.count(x) == 1:
             return x
